@@ -1,0 +1,23 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.lang.Math;
+class HelloWorld {
+    public static void power(int x, int n)
+    {
+        if(n ==0)
+        {
+            System.out.print( "1 ,");
+            return;
+        }
+        double c= Math.pow(x,n);
+        System.out.println(c+",");
+        power(x,n-1);
+        
+    }
+    public static void main(String[] args) {
+        int n = 7;
+        int x =2;
+        power(x,n-1);
+
+    }
+}
