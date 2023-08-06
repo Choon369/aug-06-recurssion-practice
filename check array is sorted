@@ -1,0 +1,25 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static boolean check(int a[],int i ,int n)
+    {
+        if(i ==n )
+        {
+            return true;
+        }
+        int cur = a[i];
+        if(cur < a[i+1])
+        {
+            return check(a,i+1,n);                 // here the return statement is used cause the function call done returns some value inform of boolean 
+        }
+        else
+            return false;
+        
+    }
+    public static void main(String[] args) {
+        int a[] ={1,2,3,4,5};
+        boolean x =check(a,0,4);
+        System.out.println(x);
+    }
+}
