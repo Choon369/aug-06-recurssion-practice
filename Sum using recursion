@@ -1,0 +1,24 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static void suma(int i ,int n, int sum)
+    {
+        if(i == n)
+        {
+            sum += i;
+            System.out.println(sum);                    // output is being printed also return type is empty so void id used as return type else will return error 
+            return;
+        }
+        sum += i;
+        suma(i+1,n,sum);
+        
+    }
+    public static void main(String[] args) {
+        int sum = 0 ;
+        int i = 0;
+        int n =5;
+        suma(i,n,sum);                                 // out put is being printed so no need to assign the value of called function in an variable  if a int value 
+                                                          were to be return we needed to store it in a variable and then printed it;
+    }
+}
