@@ -1,0 +1,36 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static int fi=-1;
+    public static int la=-1;
+    
+    public static void Occurance(String s, int ind,char el)
+    {
+        if(ind == s.length())
+        {
+            System.out.print("First"+fi);
+            System.err.print("Last"+la);
+            return ;
+        }
+        char curr = s.charAt(ind);
+        if(curr == el)
+        {
+            if(fi == -1)
+            {
+                fi = ind;
+            }
+            else
+            {
+                la = ind;
+            }
+        }
+        Occurance(s,ind +1,el);
+    }
+    public static void main(String[] args) {
+        String s ="satya";
+        int n = s.length();
+        Occurance(s,0,'a');
+
+    }
+}
