@@ -1,0 +1,30 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static boolean[]  map = new boolean[26];
+    
+    public static void duplicate(String s, int ind,String news)
+    {
+        if(ind == s.length())
+        {
+            System.out.println(news);
+            return ;
+        }
+        char curr = s.charAt(ind);
+        if(map[curr -'a'] == true)
+        {
+            duplicate(s,ind +1, news);
+            
+        }
+        else
+        {
+            news += s.charAt(ind);
+            map[curr -'a'] = true;
+            duplicate(s,ind +1, news);
+        }
+    }
+    public static void main(String[] args) {
+        duplicate("spandan",0,"");
+    }
+}
