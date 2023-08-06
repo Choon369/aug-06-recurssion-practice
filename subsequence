@@ -1,0 +1,23 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    
+    
+    public static void subsequence(String s, int ind , String news)
+    {
+        if(ind == s.length())
+        {
+            System.out.println(news);
+            return;
+        }
+        char curr = s.charAt(ind);
+        // to be 
+        subsequence(s, ind+1 , news +curr);
+        // not to be
+        subsequence(s, ind+1 , news);
+    }
+    public static void main(String[] args) {
+        subsequence("abc",0 ,"");
+    }
+}
