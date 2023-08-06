@@ -1,17 +1,17 @@
 // Online Java Compiler
 // Use this editor to write, compile and run your Java code online
-import java.util.*;
+
 class HelloWorld {
     public static int fib(int n)
     {
         if( n==1 || n==0)
         {
-            return n;
+            return n;                     // int is being used so return type must be int 
         }
         int f1 = fib(n-1);
         int f2 = fib(n-2);
         int f = f1 +f2;
-        return f;
+        return f;                         // int is being used so return type must be int 
     }
     public static void main(String[] args) {
         int x = fib(4);
